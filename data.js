@@ -707,5 +707,705 @@ const faqData = [
         answer: "1. Semantic HTML 2. ARIA attributes 3. Keyboard navigation 4. Focus management 5. Color contrast 6. Screen reader testing 7. Use ESLint-jsx-a11y plugin",
         difficulty: "Medium",
         topic: "Accessibility"
-    }
+    },
+      {
+    id: 101,
+    question: "What is hoisting in JavaScript?",
+    answer: "Hoisting is JavaScript's default behavior of moving declarations of functions, variables, and classes to the top of their containing scope during compilation phase. Only declarations are hoisted, not initializations.",
+    difficulty: "Easy",
+    topic: "Core Concepts"
+  },
+  {
+    id: 102,
+    question: "Explain the difference between var, let, and const.",
+    answer: "var is function-scoped and can be redeclared; let and const are block-scoped. const declarations cannot be reassigned after initialization.",
+    difficulty: "Easy",
+    topic: "Variables"
+  },
+  {
+    id: 103,
+    question: "What are closures and how are they used?",
+    answer: "A closure is a function that retains access to its lexical scope even when executed outside its original context. They are used for data privacy and to create function factories.",
+    difficulty: "Medium",
+    topic: "Functions"
+  },
+  {
+    id: 104,
+    question: "What is the difference between == and === operators?",
+    answer: "== compares values after type coercion, === compares both value and type with no coercion.",
+    difficulty: "Easy",
+    topic: "Operators"
+  },
+  {
+    id: 105,
+    question: "Explain event delegation.",
+    answer: "Event delegation leverages event bubbling by attaching a single event listener to a parent element; events on its children are caught and handled by checking event.target.",
+    difficulty: "Medium",
+    topic: "DOM"
+  },
+  {
+    id: 106,
+    question: "What is the purpose of the 'use strict' directive?",
+    answer: "'use strict' enforces stricter parsing and error handling in code, preventing silent errors and disallowing unsafe actions like implicitly creating global variables.",
+    difficulty: "Easy",
+    topic: "Core Concepts"
+  },
+  {
+    id: 107,
+    question: "Explain the concept of promises in JavaScript.",
+    answer: "A promise represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It has states: pending, fulfilled, or rejected.",
+    difficulty: "Easy",
+    topic: "Asynchronous"
+  },
+  {
+    id: 108,
+    question: "What is async/await and how does it relate to promises?",
+    answer: "async/await is syntactic sugar over promises, allowing asynchronous code to be written in a synchronous style. await pauses execution until the promise resolves.",
+    difficulty: "Medium",
+    topic: "Asynchronous"
+  },
+  {
+    id: 109,
+    question: "How do you clone an object in JavaScript?",
+    answer: "You can clone objects using Object.assign({}, obj) for shallow copy, or JSON.parse(JSON.stringify(obj)), or structuredClone(), or custom deep copy functions.",
+    difficulty: "Medium",
+    topic: "Objects"
+  },
+  {
+    id: 110,
+    question: "What are arrow functions and how are they different from regular functions?",
+    answer: "Arrow functions provide a concise syntax and do not have their own this, arguments, or prototype. They inherit this from the enclosing context.",
+    difficulty: "Easy",
+    topic: "Functions"
+  },
+  {
+    id: 111,
+    question: "What is the event loop in JavaScript?",
+    answer: "The event loop is a mechanism that allows JavaScript to perform non-blocking I/O by managing the call stack, callback queue, and microtask queue.",
+    difficulty: "Hard",
+    topic: "Asynchronous"
+  },
+  {
+    id: 112,
+    question: "Explain the difference between call, apply, and bind.",
+    answer: "call invokes a function with a given this value and arguments provided individually; apply takes arguments as an array; bind returns a new function with bound this and optional preset arguments.",
+    difficulty: "Medium",
+    topic: "Functions"
+  },
+  {
+    id: 113,
+    question: "What is a prototype in JavaScript?",
+    answer: "A prototype is an object from which other objects inherit properties. All functions have a prototype property used for implementing inheritance.",
+    difficulty: "Easy",
+    topic: "Objects"
+  },
+  {
+    id: 114,
+    question: "Describe prototypal inheritance.",
+    answer: "Prototypal inheritance allows objects to inherit directly from other objects. Each object has an internal link to its prototype object.",
+    difficulty: "Medium",
+    topic: "Objects"
+  },
+  {
+    id: 115,
+    question: "What is the difference between null and undefined?",
+    answer: "undefined means a variable has been declared but not assigned a value; null is an assignment value that represents no value.",
+    difficulty: "Easy",
+    topic: "Types"
+  },
+  {
+    id: 116,
+    question: "Explain how JavaScript handles asynchronous operations internally.",
+    answer: "JavaScript uses an event loop, task queue, and microtask queue to handle asynchronous callbacks and promise resolutions without blocking the main thread.",
+    difficulty: "Hard",
+    topic: "Asynchronous"
+  },
+  {
+    id: 117,
+    question: "What are generator functions?",
+    answer: "Generator functions, declared with function*, can pause execution with yield and resume later, returning an iterator.",
+    difficulty: "Medium",
+    topic: "ES6+"
+  },
+  {
+    id: 118,
+    question: "What is the purpose of the Symbol type?",
+    answer: "Symbol is a primitive data type whose instances are unique and immutable, often used as unique object property keys.",
+    difficulty: "Medium",
+    topic: "ES6+"
+  },
+  {
+    id: 119,
+    question: "Explain the module system in JavaScript (ESM).",
+    answer: "ESM uses import/export syntax for module encapsulation. Imports are statically analyzed, supporting tree shaking and asynchronous loading.",
+    difficulty: "Medium",
+    topic: "Modules"
+  },
+  {
+    id: 120,
+    question: "How do you handle errors in asynchronous code?",
+    answer: "You can handle errors with .catch on promises, try/catch within async functions, or using Promise.allSettled for multiple promises.",
+    difficulty: "Medium",
+    topic: "Asynchronous"
+  },
+  {
+    id: 121,
+    question: "What are template literals?",
+    answer: "Template literals are string literals enclosed by backticks that support interpolation with ${expression} and multi-line strings.",
+    difficulty: "Easy",
+    topic: "Strings"
+  },
+  {
+    id: 122,
+    question: "Explain destructuring assignment.",
+    answer: "Destructuring assignment allows unpacking values from arrays or properties from objects into distinct variables.",
+    difficulty: "Easy",
+    topic: "ES6+"
+  },
+  {
+    id: 123,
+    question: "What is the spread operator and how is it used?",
+    answer: "The spread operator (...) expands iterable elements in function calls, array literals, or object literals for shallow copies.",
+    difficulty: "Easy",
+    topic: "ES6+"
+  },
+  {
+    id: 124,
+    question: "Explain rest parameters.",
+    answer: "Rest parameters (...) collect all remaining function arguments into an array.",
+    difficulty: "Easy",
+    topic: "ES6+"
+  },
+  {
+    id: 125,
+    question: "What is a JavaScript promise chain?",
+    answer: "A promise chain is a series of .then calls where each returns a value or another promise, allowing sequential asynchronous operations.",
+    difficulty: "Medium",
+    topic: "Asynchronous"
+  },
+  {
+    id: 126,
+    question: "How do you create a custom event in the browser?",
+    answer: "Use new CustomEvent('eventName', { detail: data }) and dispatch with element.dispatchEvent().",
+    difficulty: "Medium",
+    topic: "DOM"
+  },
+  {
+    id: 127,
+    question: "What is event bubbling and capturing?",
+    answer: "Event bubbling is when an event propagates from target to ancestor elements; capturing is the reverse, from ancestor to target.",
+    difficulty: "Medium",
+    topic: "DOM"
+  },
+  {
+    id: 128,
+    question: "Explain localStorage and sessionStorage.",
+    answer: "localStorage and sessionStorage store key-value pairs in the browser. localStorage persists across sessions; sessionStorage clears on tab close.",
+    difficulty: "Easy",
+    topic: "Web APIs"
+  },
+  {
+    id: 129,
+    question: "What is JSON and how do you parse/stringify it?",
+    answer: "JSON is a text format for data interchange. Use JSON.parse() to convert JSON string to object and JSON.stringify() to convert object to JSON string.",
+    difficulty: "Easy",
+    topic: "Data Formats"
+  },
+  {
+    id: 130,
+    question: "Describe the differences between GET and POST HTTP methods.",
+    answer: "GET retrieves data and appends parameters in the URL; POST sends data in the request body. GET is idempotent, POST is not.",
+    difficulty: "Easy",
+    topic: "Networking"
+  },
+  {
+    id: 131,
+    question: "Explain CORS and how to handle it.",
+    answer: "CORS is a browser security feature restricting cross-origin requests. Servers set Access-Control-Allow-Origin header to allow requests.",
+    difficulty: "Medium",
+    topic: "Security"
+  },
+  {
+    id: 132,
+    question: "What is a service worker?",
+    answer: "A service worker is a script that runs in the background, intercepting network requests for offline capabilities and caching.",
+    difficulty: "Medium",
+    topic: "PWA"
+  },
+  {
+    id: 133,
+    question: "How do you debounce a function?",
+    answer: "Debouncing ensures a function is called only after a specified delay since the last invocation, often implemented with setTimeout/clearTimeout.",
+    difficulty: "Medium",
+    topic: "Performance"
+  },
+  {
+    id: 134,
+    question: "What is throttling?",
+    answer: "Throttling limits the number of times a function can be called over time, ensuring at most one execution per interval.",
+    difficulty: "Medium",
+    topic: "Performance"
+  },
+  {
+    id: 135,
+    question: "Explain deep vs shallow copy.",
+    answer: "Shallow copy duplicates only the first-level properties, referencing nested objects; deep copy recursively copies all nested objects.",
+    difficulty: "Medium",
+    topic: "Objects"
+  },
+  {
+    id: 136,
+    question: "What is JSONP and why was it used?",
+    answer: "JSONP is a workaround for CORS using <script> tags to fetch cross-domain data via callback functions, now largely replaced by CORS.",
+    difficulty: "Hard",
+    topic: "Networking"
+  },
+  {
+    id: 137,
+    question: "Describe the module pattern in JavaScript.",
+    answer: "The module pattern uses IIFEs to create private and public members, encapsulating state and exposing an API.",
+    difficulty: "Medium",
+    topic: "Design Patterns"
+  },
+  {
+    id: 138,
+    question: "What is memoization?",
+    answer: "Memoization caches function results based on input arguments to avoid redundant computations.",
+    difficulty: "Medium",
+    topic: "Performance"
+  },
+  {
+    id: 139,
+    question: "Explain the factory function pattern.",
+    answer: "Factory functions create and return new objects, encapsulating object creation logic without using classes.",
+    difficulty: "Easy",
+    topic: "Design Patterns"
+  },
+  {
+    id: 140,
+    question: "What is the revealing module pattern?",
+    answer: "The revealing module pattern exposes only specific methods and properties from an IIFE, keeping other parts private.",
+    difficulty: "Medium",
+    topic: "Design Patterns"
+  },
+  {
+    id: 141,
+    question: "How do you implement inheritance using ES6 classes?",
+    answer: "Use class Child extends Parent { constructor() { super(); } } to inherit methods and properties.",
+    difficulty: "Easy",
+    topic: "ES6+"
+  },
+  {
+    id: 142,
+    question: "What is a WeakMap?",
+    answer: "WeakMap is a collection of key-value pairs where keys are objects held weakly, allowing garbage collection if no other references exist.",
+    difficulty: "Hard",
+    topic: "ES6+"
+  },
+  {
+    id: 143,
+    question: "What is tail call optimization?",
+    answer: "Tail call optimization reuses stack frames for function calls in tail position to prevent stack overflows in recursive calls.",
+    difficulty: "Hard",
+    topic: "Functions"
+  },
+  {
+    id: 144,
+    question: "Explain the difference between for...in and for...of loops.",
+    answer: "for...in iterates over object keys (including inherited), for...of iterates over iterable values.",
+    difficulty: "Easy",
+    topic: "ES6+"
+  },
+  {
+    id: 145,
+    question: "How do you check if a property exists on an object?",
+    answer: "Use hasOwnProperty, in operator, or Object.prototype.hasOwnProperty.call(obj, prop).",
+    difficulty: "Easy",
+    topic: "Objects"
+  },
+  {
+    id: 146,
+    question: "Explain the concept of immutability and how to enforce it in JavaScript.",
+    answer: "Immutability means values cannot be changed; enforce by using const, Object.freeze, spread/rest for copies, and libraries like Immutable.js.",
+    difficulty: "Medium",
+    topic: "Functional Programming"
+  },
+  {
+    id: 147,
+    question: "What is functional programming in JavaScript?",
+    answer: "Functional programming emphasizes pure functions, immutability, and higher-order functions to avoid side effects.",
+    difficulty: "Medium",
+    topic: "Functional Programming"
+  },
+  {
+    id: 148,
+    question: "What are higher-order functions?",
+    answer: "Higher-order functions take functions as arguments or return functions, e.g., map, filter, reduce.",
+    difficulty: "Easy",
+    topic: "Functional Programming"
+  },
+  {
+    id: 149,
+    question: "Explain currying.",
+    answer: "Currying transforms a function with multiple arguments into a sequence of functions each taking a single argument.",
+    difficulty: "Medium",
+    topic: "Functional Programming"
+  },
+  {
+    id: 150,
+    question: "What is the difference between map and forEach?",
+    answer: "map returns a new array of transformed elements; forEach iterates but returns undefined.",
+    difficulty: "Easy",
+    topic: "Arrays"
+  },
+  {
+    id: 151,
+    question: "How do you remove duplicates from an array?",
+    answer: "Use new Set(array) to remove duplicates and spread back to array: [...new Set(array)].",
+    difficulty: "Easy",
+    topic: "Arrays"
+  },
+  {
+    id: 152,
+    question: "What is a typed array?",
+    answer: "Typed arrays like Uint8Array provide arrays of a specific numeric type for binary data manipulation.",
+    difficulty: "Hard",
+    topic: "Data Types"
+  },
+  {
+    id: 153,
+    question: "Explain Promise.all vs Promise.race vs Promise.allSettled.",
+    answer: "Promise.all waits for all to fulfill or rejects on first rejection; race settles on first outcome; allSettled waits for all to settle without rejecting.",
+    difficulty: "Medium",
+    topic: "Asynchronous"
+  },
+  {
+    id: 154,
+    question: "What is async iteration?",
+    answer: "Async iteration uses for await...of to iterate over async iterables returning promises.",
+    difficulty: "Hard",
+    topic: "ES6+"
+  },
+  {
+    id: 155,
+    question: "How do you create a private field in ES6 classes?",
+    answer: "Use # prefix: class A { #private; constructor() { this.#private = 42; } }.",
+    difficulty: "Medium",
+    topic: "ES6+"
+  },
+  {
+    id: 156,
+    question: "Explain the observer pattern in JavaScript.",
+    answer: "Observer pattern allows objects (observers) to subscribe to events emitted by subject, often implemented with callbacks or event emitters.",
+    difficulty: "Medium",
+    topic: "Design Patterns"
+  },
+  {
+    id: 157,
+    question: "What is a promise microtask?",
+    answer: "Promise callbacks (then, catch) are queued as microtasks, executed after the current job but before rendering and macrotasks.",
+    difficulty: "Hard",
+    topic: "Asynchronous"
+  },
+  {
+    id: 158,
+    question: "Describe the concept of web workers.",
+    answer: "Web workers run scripts in background threads separate from the main UI thread for computational tasks.",
+    difficulty: "Medium",
+    topic: "Web APIs"
+  },
+  {
+    id: 159,
+    question: "How do you detect a mobile device in JavaScript?",
+    answer: "Check navigator.userAgent for mobile keywords or use matchMedia('(pointer: coarse)').",
+    difficulty: "Easy",
+    topic: "Web APIs"
+  },
+  {
+    id: 160,
+    question: "Explain the fetch API and how to handle JSON responses.",
+    answer: "fetch returns a promise resolving to Response. Use response.json() to parse JSON payload.",
+    difficulty: "Easy",
+    topic: "Web APIs"
+  },
+  {
+    id: 161,
+    question: "What is the difference between local scope and global scope in JS?",
+    answer: "Global scope is accessible anywhere; local scope (function or block) is limited to that context.",
+    difficulty: "Easy",
+    topic: "Core Concepts"
+  },
+  {
+    id: 162,
+    question: "Explain the purpose of typeof operator.",
+    answer: "typeof returns a string indicating the type of its operand, e.g., 'string', 'number', 'object', or 'undefined'.",
+    difficulty: "Easy",
+    topic: "Operators"
+  },
+  {
+    id: 163,
+    question: "What are BigInt and why use them?",
+    answer: "BigInt allows representation of integers beyond Number.MAX_SAFE_INTEGER, created with BigInt() or n suffix.",
+    difficulty: "Medium",
+    topic: "Data Types"
+  },
+  {
+    id: 164,
+    question: "Explain optional chaining.",
+    answer: "Optional chaining (?.) safely accesses nested properties, returning undefined if any part is null or undefined.",
+    difficulty: "Easy",
+    topic: "ES6+"
+  },
+  {
+    id: 165,
+    question: "What is nullish coalescing operator?",
+    answer: "The nullish coalescing operator (??) returns the right operand when the left is null or undefined, unlike ||.",
+    difficulty: "Easy",
+    topic: "ES6+"
+  },
+  {
+    id: 166,
+    question: "How do you check for equality of two objects in JS?",
+    answer: "Primitive equality on JSON.stringify outputs, or deep comparison via recursive function or libraries like lodash.isEqual.",
+    difficulty: "Medium",
+    topic: "Objects"
+  },
+  {
+    id: 167,
+    question: "Explain the difference between setTimeout and setInterval.",
+    answer: "setTimeout executes a function once after a delay; setInterval executes repeatedly at specified intervals.",
+    difficulty: "Easy",
+    topic: "Asynchronous"
+  },
+  {
+    id: 168,
+    question: "What is a promise constructor anti-pattern?",
+    answer: "Avoid wrapping existing promises in new Promise unnecessarily; instead return the original promise or chain.",
+    difficulty: "Hard",
+    topic: "Asynchronous"
+  },
+  {
+    id: 169,
+    question: "Explain the concept of tail recursion.",
+    answer: "Tail recursion occurs when a function calls itself as its last action, enabling optimization to reuse stack frame.",
+    difficulty: "Hard",
+    topic: "Functions"
+  },
+  {
+    id: 170,
+    question: "What is event loop starvation?",
+    answer: "Event loop starvation happens when long-running tasks block the event loop, delaying callbacks and UI updates.",
+    difficulty: "Hard",
+    topic: "Asynchronous"
+  },
+  {
+    id: 171,
+    question: "How do you implement a linked list in JavaScript?",
+    answer: "Use objects with value and next properties, managing head and tail pointers to add/remove nodes.",
+    difficulty: "Medium",
+    topic: "Data Structures"
+  },
+  {
+    id: 172,
+    question: "Explain the difference between document.ready and window.onload.",
+    answer: "document.ready (DOMContentLoaded) fires when HTML is parsed; window.onload fires after all resources (images, styles) load.",
+    difficulty: "Medium",
+    topic: "DOM"
+  },
+  {
+    id: 173,
+    question: "What are HTML templates and how are they used?",
+    answer: "The <template> tag holds inert HTML fragments; clone with content.cloneNode(true) for dynamic rendering.",
+    difficulty: "Medium",
+    topic: "DOM"
+  },
+  {
+    id: 174,
+    question: "How do you lazy-load images in JavaScript?",
+    answer: "Use loading='lazy' attribute or IntersectionObserver to load images when they enter the viewport.",
+    difficulty: "Medium",
+    topic: "Performance"
+  },
+  {
+    id: 175,
+    question: "Explain Cross-Site Scripting (XSS) and prevention techniques.",
+    answer: "XSS is injection of malicious scripts; prevent by sanitizing inputs, using Content Security Policy, and encoding output.",
+    difficulty: "Hard",
+    topic: "Security"
+  },
+  {
+    id: 176,
+    question: "What is a Content Security Policy (CSP)?",
+    answer: "CSP is a set of HTTP headers to restrict sources of executable scripts, styles, and other resources to mitigate XSS.",
+    difficulty: "Medium",
+    topic: "Security"
+  },
+  {
+    id: 177,
+    question: "How do you detect memory leaks in JavaScript?",
+    answer: "Use browser devtools heap snapshots, monitor increasing memory consumption, and find detached DOM nodes.",
+    difficulty: "Hard",
+    topic: "Performance"
+  },
+  {
+    id: 178,
+    question: "What are proxies in JavaScript?",
+    answer: "Proxy objects define custom behavior for fundamental operations via handler traps like get, set, and apply.",
+    difficulty: "Hard",
+    topic: "ES6+"
+  },
+  {
+    id: 179,
+    question: "Explain Reflect API.",
+    answer: "Reflect provides methods for interceptable JavaScript operations, mirroring proxy traps and builtin behaviors.",
+    difficulty: "Hard",
+    topic: "ES6+"
+  },
+  {
+    id: 180,
+    question: "What is the purpose of Object.assign?",
+    answer: "Object.assign copies enumerable properties from source objects to a target object, used for shallow merging.",
+    difficulty: "Easy",
+    topic: "Objects"
+  },
+  {
+    id: 181,
+    question: "How do you export multiple values from a module?",
+    answer: "Use named exports: export function fn() {}; export const x = 1;. Import with import { fn, x } from './module'.",
+    difficulty: "Easy",
+    topic: "Modules"
+  },
+  {
+    id: 182,
+    question: "What is default export?",
+    answer: "Default export allows exporting a single value as default: export default function() {}. Import with any name.",
+    difficulty: "Easy",
+    topic: "Modules"
+  },
+  {
+    id: 183,
+    question: "Explain dynamic import().",
+    answer: "dynamic import() loads modules asynchronously at runtime returning a promise resolving to the module.",
+    difficulty: "Medium",
+    topic: "Modules"
+  },
+  {
+    id: 184,
+    question: "How do you polyfill new features?",
+    answer: "Use polyfill libraries like core-js or import via Babel to provide missing functionality in older engines.",
+    difficulty: "Medium",
+    topic: "Compatibility"
+  },
+  {
+    id: 185,
+    question: "What is tree shaking?",
+    answer: "Tree shaking is removing unused code during bundling by leveraging ES module static analysis.",
+    difficulty: "Medium",
+    topic: "Build Tools"
+  },
+  {
+    id: 186,
+    question: "Explain how bundlers like Webpack work.",
+    answer: "Bundlers analyze module dependencies, transform code via loaders, and output optimized bundles for the browser.",
+    difficulty: "Medium",
+    topic: "Build Tools"
+  },
+  {
+    id: 187,
+    question: "What are source maps?",
+    answer: "Source maps map transformed code back to original sources, aiding debugging by preserving line numbers.",
+    difficulty: "Easy",
+    topic: "Build Tools"
+  },
+  {
+    id: 188,
+    question: "How do you minify JavaScript code?",
+    answer: "Minification removes whitespace and renames variables via tools like UglifyJS or Terser.",
+    difficulty: "Easy",
+    topic: "Build Tools"
+  },
+  {
+    id: 189,
+    question: "What is a virtual DOM?",
+    answer: "The virtual DOM is an in-memory representation of UI; libraries diff virtual and real DOM to update efficiently.",
+    difficulty: "Medium",
+    topic: "Frameworks"
+  },
+  {
+    id: 190,
+    question: "Explain data binding in frameworks like React.",
+    answer: "Data binding syncs UI and data. React uses one-way binding: data flows from state/props to UI, changes via events.",
+    difficulty: "Medium",
+    topic: "Frameworks"
+  },
+  {
+    id: 191,
+    question: "What is a Single Page Application (SPA)?",
+    answer: "SPA is a web app that loads a single HTML page and dynamically updates content without full page reloads.",
+    difficulty: "Easy",
+    topic: "Architecture"
+  },
+  {
+    id: 192,
+    question: "How do you optimizeRendering performance in a React app?",
+    answer: "Use memoization (React.memo), avoid anonymous functions in render, lazy load components, and use key properly.",
+    difficulty: "Hard",
+    topic: "Frameworks"
+  },
+  {
+    id: 193,
+    question: "Explain reconciliation in React.",
+    answer: "Reconciliation is React's process to diff virtual DOM trees and compute minimal updates to apply to the real DOM.",
+    difficulty: "Medium",
+    topic: "Frameworks"
+  },
+  {
+    id: 194,
+    question: "What is JSX?",
+    answer: "JSX is JavaScript syntax extension that looks like HTML and compiles to React.createElement calls.",
+    difficulty: "Easy",
+    topic: "Frameworks"
+  },
+  {
+    id: 195,
+    question: "How do you handle state in React components?",
+    answer: "Use useState in functional components or this.state in class components; lift state up for shared data.",
+    difficulty: "Easy",
+    topic: "Frameworks"
+  },
+  {
+    id: 196,
+    question: "What are hooks in React?",
+    answer: "Hooks are functions like useState and useEffect that let you use React state and lifecycle features in functional components.",
+    difficulty: "Easy",
+    topic: "Frameworks"
+  },
+  {
+    id: 197,
+    question: "Explain useEffect hook in React.",
+    answer: "useEffect runs side effects after render. You can specify dependencies; cleanup function runs before next effect or unmount.",
+    difficulty: "Medium",
+    topic: "Frameworks"
+  },
+  {
+    id: 198,
+    question: "What is context API in React?",
+    answer: "Context API provides a way to pass data through component tree without prop drilling, using React.createContext().",
+    difficulty: "Medium",
+    topic: "Frameworks"
+  },
+  {
+    id: 199,
+    question: "How do you optimize bundle size in a React project?",
+    answer: "Use code splitting with React.lazy, dynamic imports, and tree shaking to remove unused exports.",
+    difficulty: "Medium",
+    topic: "Frameworks"
+  },
+  {
+    id: 200,
+    question: "What are Progressive Web Apps (PWAs)?",
+    answer: "PWAs are web applications that use modern web capabilities to deliver app-like experiences including offline support and installability.",
+    difficulty: "Medium",
+    topic: "PWA"
+  },
 ];
