@@ -1,10 +1,10 @@
 # React Interview Questions
 
-A collection of 100 tricky React.js interview questions and detailed answers (≥ 70 words each), organized by topic and difficulty.
+A collection of 100 tricky Javascript and React.js interview questions and detailed answers (≥ 70 words each), organized by topic and difficulty.
 
 ## Files
 
-- `react_interview_questions.json`  
+- `data.json`  
   - Array of objects with these keys:
     - `id`: number  
     - `question`: string  
